@@ -1,0 +1,69 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+--back:rgb(0, 0, 0);
+--footer:#242424;
+--secondary: #f0db4f;
+--primary: #6060607d;
+--text: rgb(255, 255, 255) ;
+/* #41b783 */
+}
+
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  padding: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+  transition: 0.1s linear;
+
+  
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  background-color: var(--back);
+ 
+}
+
+a{
+  color: rgb(218, 218, 218)  ;
+  text-decoration: none;
+}
+
+a.router-link-exact-active{
+  border-bottom: 2px solid var(--secondary);
+}
+
+.taille0{
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.taille1{
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.taille2{
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.taille3{
+
+  font-weight: 400;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9rem;
+}
