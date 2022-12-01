@@ -10,6 +10,32 @@ onMounted(() => {
     console.log(navhtml.offsetTop);
 });
 
+function lottie(){
+    
+    // console.log(test);
+
+    console.log('bite');
+    setTimeout(() => {
+        const respons = document.querySelectorAll('.responsive')
+        const cSun = document.querySelector('#mode')
+
+
+
+if(cSun.classList.value==="sun"){
+    respons[0].style.display = "none"
+    respons[1].style.display = "block"
+
+    
+
+    
+}else{
+    respons[1].style.display = "none"
+    respons[0].style.display = "block"
+    
+}
+    }, 10);
+}
+
 
 </script>
 
@@ -18,7 +44,7 @@ onMounted(() => {
         <RouterView/>
         <nav ref="lanav" >
  
- <RouterLink to="/">Accueil</RouterLink>
+ <RouterLink @click="lottie()" to="/">Accueil</RouterLink>
  <RouterLink to="/profile">Qui suis-je ?</RouterLink>
  <RouterLink to="/skill">Mes Compétences</RouterLink>
 </nav>
@@ -59,7 +85,7 @@ nav {
 }
 
 nav a{
-    color: var(--text);
+    color: #fff;
     padding: 4px 0;
     margin: 5px ;
 

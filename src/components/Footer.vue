@@ -50,6 +50,7 @@
         gap: 40px;
         background-color: rgba(51, 51, 51, 0.457);
         padding: 20px 20px 0 20px;
+        color: #fff;
 
     }
 
@@ -69,18 +70,18 @@
     footer #contacted .input{
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        border-bottom: 2px solid var(--text);
+        border-bottom: 2px solid #fff;
         padding: 20px;
         width: 100%;
-        
+        color: #fff;
     }
 
     footer #contacted .button{
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        border-bottom: 2px solid var(--secondary);
+        border-bottom: 2px solid #fff;
         padding: 10px;
-        color: var(--text);
+        color: #fff;
         font-size: 1.2rem;
         margin-top: 20px;
     }

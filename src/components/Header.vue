@@ -1,5 +1,8 @@
 <script setup>
     let root = document.documentElement;
+    
+
+  
 
 
     function nightMode() {
@@ -7,6 +10,8 @@
         const fleche = document.querySelector('#Capa_1')
         const nMode = document.querySelector('#mode');
         const respons = document.querySelectorAll('.responsive')
+        const pied = document.querySelector('#footer')
+        
 
         nMode.classList.toggle('sun');
         nMode.classList.toggle('night');
@@ -20,11 +25,18 @@
             lebird[0].style.display = "none"
             lebird[1].style.display = "block"
 
-            
-                respons[0].style.display = "none"
-                respons[1].style.display = "block"
-           
+            if(respons.length>0){
 
+            respons[0].style.display = "none"
+            respons[1].style.display = "block"
+            }
+            
+
+            pied.style.backgroundColor = "#333"
+
+            nMode.style.border="3px solid #000"
+        
+        
 
 
         } else {
@@ -34,10 +46,15 @@
             lebird[1].style.display = "none"
             lebird[0].style.display = "block"
 
+            if(respons.length>0){
+            respons[1].style.display = "none"
+            respons[0].style.display = "block"
+            }
             
-                respons[1].style.display = "none"
-                respons[0].style.display = "block"
-           
+            
+            pied.style.backgroundColor = "rgba(51, 51, 51, 0.457)"
+
+            nMode.style.border="3px solid rgb(255, 255, 255)"
 
         }
 
@@ -227,7 +244,7 @@
     .sun {
         justify-content: start;
 
-        background-color: #000000;
+        background-color: #333;
     }
 
 
@@ -242,7 +259,7 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 2px solid var(--primary);
-
+  
         position: relative;
 
 
@@ -285,7 +302,7 @@
 
     header #positionMode #mode {
 
-        border: 3px solid var(--text);
+        border: 3px solid rgb(255, 255, 255);
         width: 40px;
         height: 20px;
         border-radius: 50px;
@@ -300,9 +317,9 @@
     header #positionMode #mode #selectmode {
         height: 18px;
         width: 18px;
-        background-color: var(--text);
+        background-color: #fff;
         border-radius: 50%;
-        border: 2px solid var(--back);
+        border: 2px solid #000;
 
     }
 
@@ -320,6 +337,7 @@
         margin: 0 auto;
         background: rgba(51, 51, 51, 0.457);
         box-shadow: 0px 0px 20px #00000017;
+        overflow: hidden;
     }
 
     header figure #en-tete {
@@ -373,7 +391,7 @@
 
         margin: 0 auto 70px auto;
         text-align: center;
-        height: 40%;
+        height: 30%;
 
 
     }
@@ -396,12 +414,42 @@
 
     @media (min-width: 900px) {
 
+        header{
+            flex-direction: column-reverse;
+            gap: 0;
+            
+            
+        }
+
         header figure {
             width: 100%;
+            height: 70%;
+            position: relative;
         }
 
         header #msgHeader {
             width: 100%;
+            height: 30%;
+            
+            margin: 0;
+        }
+
+        header figure #en-tete ul{
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            width: auto;
+            gap: 20px;
+            top: 0px;
+            margin: 10px;
+           
+        }
+
+        header #positionMode{
+            top: 0px;
+            left: 10px;
+            right: auto;
+            
         }
 
         header #msgHeader .contact2 {
@@ -410,8 +458,8 @@
 
         }
 
-        #bird {
-            bottom: -100px;
+        .bird {
+            top: 0;
         }
 
 
