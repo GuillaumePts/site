@@ -335,8 +335,9 @@
         height: 70%;
         width: 65%;
         margin: 0 auto;
-        background: rgba(51, 51, 51, 0.457);
-        box-shadow: 0px 0px 20px #00000017;
+        background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,1) 100%);
+        
         overflow: hidden;
     }
 
@@ -349,6 +350,7 @@
         gap: 20px;
         margin: 20px;
         width: 100%;
+        
 
     }
 
@@ -388,7 +390,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-
+       
         margin: 0 auto 70px auto;
         text-align: center;
         height: 30%;

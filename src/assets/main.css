@@ -12,6 +12,7 @@
   'main'
   'footer';
   font-weight: normal;
+  box-shadow: 0px 0px 20px #00000017;
 }
 
 #header{
