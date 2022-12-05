@@ -259,7 +259,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 2px solid var(--primary);
+        /* border-bottom: 2px solid var(--primary); */
   
         position: relative;
 
@@ -280,7 +280,7 @@
     header #positionMode {
         position: absolute;
         right: 10px;
-        margin-top: 4%;
+        margin-top: 13px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -334,33 +334,30 @@
         align-items: center;
         justify-content: space-between;
         height: 70%;
-        width: 65%;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 450px;
+        
         background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,1) 100%);
         
         overflow: hidden;
     }
 
-    header figure #en-tete {
-
+    header figure #en-tete{
         display: flex;
-        flex-direction: column;
+        justify-content: start;
         align-items: center;
-        justify-content: center;
-        gap: 20px;
-        margin: 20px;
         width: 100%;
-        
-
     }
+
 
     header figure #en-tete ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
-        width: 100%;
-
+        
+        gap: 20px;
+        margin: 10px 0 20px 10px;
 
     }
 
@@ -402,11 +399,12 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,1)
 
 
     header #msgHeader .contact2 {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         border-radius: 50px;
         background-color: var(--text);
         padding: 7px;
+        display: flex;
 
 
     }
@@ -415,7 +413,7 @@ background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,1)
         fill: var(--back)
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 915px) {
 
         header{
             flex-direction: column-reverse;

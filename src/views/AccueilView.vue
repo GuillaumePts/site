@@ -42,7 +42,7 @@
 
     }
 
-    @media (min-width: 900px){
+    @media (min-width: 915px){
         #phraseaccueil{
             padding: 80px 0 0 0 ;
             gap: 0;

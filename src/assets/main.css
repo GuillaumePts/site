@@ -27,7 +27,7 @@
   grid-area: footer;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 915px) {
   #app{
     grid-template-rows: auto auto;
     grid-template-columns: 0.4fr 1fr;

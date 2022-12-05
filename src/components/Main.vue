@@ -61,7 +61,7 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--primary);
+    /* border-bottom: 2px solid var(--primary); */
     
     
 }
@@ -91,7 +91,7 @@ nav a{
 
 }
 
-@media (min-width: 900px){
+@media (min-width: 915px){
     main{
         
         position: relative;
