@@ -93,9 +93,10 @@ nav a{
 
 @media (min-width: 900px){
     main{
-        height: 100vh;
+        
         position: relative;
         justify-content: end;
+        height: 110vh;
         
     }
 

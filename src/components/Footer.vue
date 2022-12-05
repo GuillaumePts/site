@@ -79,7 +79,7 @@
     footer #contacted .button{
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid var(--secondary);
         padding: 10px;
         color: #fff;
         font-size: 1.2rem;

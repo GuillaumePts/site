@@ -253,7 +253,8 @@
 
 
     header {
-        height: 100vh;
+        min-height: 100vh;
+        max-height: 110vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
