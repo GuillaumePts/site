@@ -9,7 +9,7 @@
         const lebird = document.querySelectorAll('.bird');
         const fleche = document.querySelector('#Capa_1')
         const nMode = document.querySelector('#mode');
-        const respons = document.querySelectorAll('.responsive')
+        
         const pied = document.querySelector('#footer')
         
 
@@ -25,12 +25,7 @@
             lebird[0].style.display = "none"
             lebird[1].style.display = "block"
 
-            if(respons.length>0){
-
-            respons[0].style.display = "none"
-            respons[1].style.display = "block"
-            }
-            
+    
 
             pied.style.backgroundColor = "#333"
 
@@ -46,10 +41,7 @@
             lebird[1].style.display = "none"
             lebird[0].style.display = "block"
 
-            if(respons.length>0){
-            respons[1].style.display = "none"
-            respons[0].style.display = "block"
-            }
+    
             
             
             pied.style.backgroundColor = "rgba(51, 51, 51, 0.457)"

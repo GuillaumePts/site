@@ -10,11 +10,6 @@ const router = createRouter({
       component: accueil
     },
     {
-      path: '/formation',
-      name: 'formation',
-      component: () => import('../views/FormationView.vue')
-    },
-    {
       path: '/profile',
       name: 'profile',
       component: () => import('../views/ProfileView.vue')

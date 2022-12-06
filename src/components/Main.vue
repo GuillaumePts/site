@@ -76,7 +76,7 @@ nav {
   align-items: center; 
   position: sticky;
   bottom: 0;
-  height: 40px;
+ 
   background: #000;
  
 
@@ -85,6 +85,7 @@ nav {
 
 nav a{
     color: #fff;
+    margin: 4px 0;
 }
 
 @media (min-width: 915px){
@@ -101,8 +102,7 @@ nav a{
         top: 0;
         font-size: 1rem;
         border-bottom: 2px solid var(--primary);
-        padding: 20px 0 20px 0;
-        
+        height: 40px;
         
 
     }
