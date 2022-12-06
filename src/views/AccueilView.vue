@@ -13,7 +13,7 @@
         <a class="taille2 contact" href="#footer">Contactez moi</a>
     </div>
     <lottie-player class="responsive " src="https://lottie.host/1565828b-d14e-4abc-900d-ac1b21497af9/GQi0s1OJ1J.json"
-        background="transparent" speed="1" style="width: 100%; max-width: 500px; max-width: 500px;" loop autoplay></lottie-player>
+        background="transparent" speed="1" style="width: 90%; max-width: 500px; max-width: 500px;" loop autoplay></lottie-player>
 
         <lottie-player class="responsive responsive2" src="https://lottie.host/cf502d55-ee9c-40ea-9e69-b3de3e3daf51/VV7V6Qhzkr.json" background="transparent" speed="1"  style="width: 100%; max-width: 500px; max-width: 500px; display:none" loop autoplay></lottie-player>
 </template>
@@ -24,7 +24,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 20px 0 0 0;
+        padding: 40px 0 0 0;
         gap: 20px;
     }
 

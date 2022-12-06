@@ -265,8 +265,8 @@ svg{
 
 
 svg{
-   width: 170px;
-   height: 170px;
+   width: 130px;
+   height: 130px;
 }
 
 }

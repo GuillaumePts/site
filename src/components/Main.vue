@@ -62,8 +62,7 @@ main{
     justify-content: space-between;
     align-items: center;
     /* border-bottom: 2px solid var(--primary); */
-    
-    
+
 }
 
 
@@ -86,26 +85,23 @@ nav {
 
 nav a{
     color: #fff;
-    padding: 4px 0;
-    margin: 5px ;
-
 }
 
 @media (min-width: 915px){
     main{
-        
+        height: 100vh;
         position: relative;
         justify-content: end;
-        height: 110vh;
+        
         
     }
 
     nav{
         position: absolute;
         top: 0;
-        font-size: 1.4rem;
+        font-size: 1rem;
         border-bottom: 2px solid var(--primary);
-        padding: 30px 0 30px 0;
+        padding: 20px 0 20px 0;
         
         
 
