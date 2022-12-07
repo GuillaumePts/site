@@ -8,7 +8,7 @@
 
     <div id="presentation">
 
-        <lottie-player id="hacker" src="https://lottie.host/1cccd27c-9ed7-4c1d-a81a-77a1863b8049/uPZjkY2Pd9.json" background="transparent" speed="1"  loop autoplay></lottie-player>
+       <div id="hacker"></div>
 
 <div id="moi">
         <div>
@@ -54,8 +54,10 @@
 
 #hacker{
      
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
+    background-color: blueviolet;
+    border-radius: 50%;
   }
 
 #presentation div{

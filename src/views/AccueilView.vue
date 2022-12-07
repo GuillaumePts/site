@@ -4,55 +4,65 @@
 
 </script>
 <template>
-    <div id="phraseaccueil">
-        <div style="text-align: center;">
-            <h2 class="taille0">Un Projet ?</h2>
-            <h2 class="taille0">Une Mission ?</h2>
-        </div>
-        <p class="taille1">N'attendez plus !</p>
-        <a class="taille2 contact" href="#footer">Contactez moi</a>
-    </div>
-    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_e7lc9gxj.json"
-        background="transparent" speed="1" style="width: 100%; max-width: 400px;" loop autoplay></lottie-player>
+   
 
-        
+   
+
+     
+
+
+
+
+<div id="test">
+
+    <div id="texte">
+        <p>Vous recherchez un <span id="dev">Developpeur</span> ?</p>
+
+        <a href="">Contactez moi </a>
+    </div>
+    
+<lottie-player src="https://lottie.host/68c305e2-0c57-48ee-ac07-eb7c97e09891/rHyJnvkMuO.json"  background="transparent"  speed="1"  style="width: 100%; "  loop  autoplay></lottie-player>
+      
+</div>
 </template>
 <style scoped>
-    #phraseaccueil {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 40px 0 0 0;
-        gap: 20px;
-    }
 
 
 
+#test{
+    width: 100%;
+    height: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,0.7368697478991597) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    .contact {
-        color: var(--text);
+#texte{
+    
+   
+}
 
-        padding: 10px;
+#texte p{
+    text-shadow: 0px 0px 5px #00000038;
+    color: #66597a;
+    font-weight: 600;
+    font-size: 2.2rem;
+    padding: 20px;
+}
 
-        border-bottom: 2px solid var(--secondary);
+#dev{
+    font-weight: 800;
+    border-bottom: 2px solid var(--secondary);
+    font-size: 3rem;
+}
 
-      
-
-
-    }
 
     @media (min-width: 915px){
-        #phraseaccueil{
-            padding: 80px 0 0 0 ;
-            gap: 0;
-            
-        }
 
-        #phraseaccueil div{
-            display: flex;
-            gap: 20px;
-        }
+
+
     }
 </style>

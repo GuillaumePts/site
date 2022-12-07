@@ -47,6 +47,8 @@ if(cSun.classList.value==="sun"){
  <RouterLink @click="lottie()" to="/">Accueil</RouterLink>
  <RouterLink to="/profile">Qui suis-je ?</RouterLink>
  <RouterLink to="/skill">Mes Compétences</RouterLink>
+
+
 </nav>
 
        
@@ -61,9 +63,12 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     /* border-bottom: 2px solid var(--primary); */
 
 }
+
+
 
 
 
@@ -102,7 +107,7 @@ nav a{
         top: 0;
         font-size: 1rem;
         border-bottom: 2px solid var(--primary);
-        height: 40px;
+        height: 50px;
         
 
     }
