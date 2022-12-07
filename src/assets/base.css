@@ -1,10 +1,10 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
---back:rgb(0, 0, 0);
+--back:#9d91af;
 --footer:#242424;
 --secondary: #ecbf42;
 --primary: #6060607d;
---text: rgb(255, 255, 255) ;
+--text: #3d3d4d;
 /* #41b783 */
 }
 

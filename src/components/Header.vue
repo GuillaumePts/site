@@ -254,7 +254,7 @@
         justify-content: space-between;
         align-items: center;
         /* border-bottom: 2px solid var(--primary); */
-        
+        color: #fff;
         position: relative;
 
 
@@ -354,15 +354,12 @@
 
     }
 
-    #en-tete ul li {
-        width: 100%;
-
-        text-align: center;
-    }
+   
 
     #en-tete ul li a {
-        width: 100%;
-        color: var(--text);
+        
+        
+        
     }
 
     #en-tete .svg {
@@ -383,6 +380,7 @@
         align-items: center;
         text-align: center;
         margin-bottom: 70px;
+        gap: 40px;
 
 
     }
@@ -390,18 +388,18 @@
 
 
     header #msgHeader .contact2 {
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 50px;
         background-color: var(--text);
-        padding: 7px;
-        display: flex;
-
-
+        padding: 10px;
     }
 
     .Capa_1 {
-        fill: var(--back)
+        fill: #fff
     }
 
     @media (min-width: 915px) {
