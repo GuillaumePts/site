@@ -60,7 +60,7 @@
         <Figure>
 
             
-            <img src="../assets/img/man-silhouette-hi.webp" alt="">
+            <img id="moi" src="../assets/img/moi.jpg" alt="">
         </Figure>
 
         <div id="msgHeader">
@@ -107,7 +107,7 @@
                     </g>
                 </svg></a>
         </div>
-        <lottie-player class="bird " src="https://lottie.host/0798345f-4a5d-4d52-b5c4-71d35198ed95/rNgLQitk6x.json"
+        <lottie-player class="bird " src="https://lottie.host/1357fa5f-5388-4109-abe4-b3560686ae2b/4njeTOtzUc.json"
             background="transparent" speed="1" loop autoplay></lottie-player>
         <lottie-player class="bird " style="display: none;"
             src="https://assets2.lottiefiles.com/packages/lf20_Kqzytj.json" background="transparent" speed="1" loop
@@ -251,10 +251,10 @@
         max-height: 110vh;
         display: flex;
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         /* border-bottom: 2px solid var(--primary); */
-        color: #fff;
+        color: var(--text);
         position: relative;
 
 
@@ -266,7 +266,7 @@
         height: 200px;
         position: absolute;
         top: 0px;
-        z-index: -1;
+        z-index: 1;
 
 
     }
@@ -325,14 +325,21 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
         width: 100%;
         max-width: 450px;
         
-        background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,1) 100%);
+        /* background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,1) 100%); */
+
         
         overflow: hidden;
+    }
+
+    header #moi{
+        filter: grayscale(50%)
     }
 
     #en-tete{
@@ -341,6 +348,7 @@
         align-items: center;
         width: 100%;
         padding: 10px;
+        
         
     }
 
@@ -358,14 +366,14 @@
 
     #en-tete ul li a {
         
-        
+        z-index: 22;
         
     }
 
     #en-tete .svg {
         width: 30px;
         height: 30px;
-        z-index: 22;
+        
     }
 
     header figure img {
@@ -381,6 +389,8 @@
         text-align: center;
         margin-bottom: 70px;
         gap: 40px;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(243,243,243,1) 50%);
+        width: 100%;
 
 
     }

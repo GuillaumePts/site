@@ -103,7 +103,7 @@
     padding: 7px 12px;
     color: #fff;
     font-weight: 800;
-    background-color: #00c2a3;
+    background-color: var(--button);
     border-radius: 5px;
     width: fit-content;
 }

@@ -8,7 +8,6 @@
 
     <div id="presentation">
 
-       <div id="hacker"></div>
 
 <div id="moi">
         <div>
@@ -49,16 +48,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin: 100px auto;
 }
 
-#hacker{
-     
-    height: 200px;
-    width: 200px;
-    background-color: blueviolet;
-    border-radius: 50%;
-  }
+
 
 #presentation div{
     display: flex;
@@ -72,15 +65,19 @@
 }
 
 #presentation #moi p{
-    font-weight: 400;
-    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text);
+    font-size: 1.2rem;
+    
 }
 
 .un{
-    border-bottom: 2px solid var(--secondary);
-    font-size: 1.2rem;
-    font-weight: 200;
-    margin-right: 10px;
+    font-weight: 700;
+    color: #6e6679 ;
+    font-size: 1rem;
+    padding: 20px 20px 20px 0;
+    text-align: left;
+    margin-top: 100px;
 }
 
 
