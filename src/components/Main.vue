@@ -81,7 +81,6 @@ nav {
   align-items: center; 
   position: sticky;
   bottom: 0;
-
   background: var(--text);
  
 

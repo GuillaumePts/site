@@ -15,8 +15,11 @@
 
 <div id="test">
 
+    <div id="bubble"></div>
+    <div id="bubble2"></div>
+
     <div id="texte">
-        <p>Vous recherchez un <span id="dev">Developpeur</span> ?</p>
+        <p>Vous recherchez un <span id="dev">Developpeur ?</span></p>
 
         <a class="contact" href="#footer">Contactez moi </a>
     </div>
@@ -32,12 +35,36 @@
 #test{
     width: 100%;
     height: 100%;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgb(164 164 164 / 35%) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+#test #bubble{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(216,211,223,1) 0%, rgba(157,145,175,1) 100%);;
+    z-index: -2;
+    transform: translateY(-50%) translateX(-50%);
+    top: 0;
+    left: 0;
+}
+
+#test #bubble2{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(216,211,223,1) 0%, rgba(157,145,175,1) 100%);;
+    z-index: -2;
+    transform: translateY(50%) translateX(50%);
+    bottom: 0;
+    right: 0;
 }
 
 #texte{
@@ -48,22 +75,27 @@
     justify-content: space-around;
     align-items: center;
     gap: 50px;
+    /* background-color: var(--back); */
     
 }
 
 #texte p{
-    text-shadow: 0px 0px 5px #00000038;
+    
     /* color: #66597a; */
-    font-weight: 600;
-    color: #fff;
-    font-size: 2.2rem;
+    font-weight: 700;
+    color: #6e6679 ;
+    font-size: 1.8rem;
     padding: 20px;
+    text-align: right;
+    margin-top: 100px;
 }
 
 #dev{
     font-weight: 800;
+    color: var(--text);
+    font-size: 2rem;
     border-bottom: 2px solid var(--secondary);
-    font-size: 3rem;
+    
 }
 
 

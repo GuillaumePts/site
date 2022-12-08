@@ -48,7 +48,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 40px;
-        background-color: rgba(51, 51, 51, 0.457);
+        background-color: #444;
         padding: 20px 20px 0 20px;
         color: #fff;
 
