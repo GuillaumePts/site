@@ -1,8 +1,7 @@
 <template>
     <footer>
         <h2 class="taille0">Contact</h2>
-        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa praesentium molestias suscipit laboriosam
-            totam voluptate blanditiis deserunt voluptatum dolore ea.
+        <p> Pour un premier contact rapide n'hésitez pas à utiliser le formulaire si dessous. Je vous réponderez sur le mail que vous aurez renseigné dans les plus brefs délai. En éspérant travailler avec vous je vous souhaite une agréable journée !
         </p>
         <div id="contacted">
             <input class="input" type="text" placeholder="NOM">

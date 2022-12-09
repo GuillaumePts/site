@@ -24,7 +24,7 @@
         <a class="contact" href="#footer">Contactez moi </a>
     </div>
     
-<lottie-player src="https://lottie.host/68c305e2-0c57-48ee-ac07-eb7c97e09891/rHyJnvkMuO.json"  background="transparent"  speed="1"  style="width: 100%; "  loop  autoplay></lottie-player>
+<lottie-player id="phone" src="https://lottie.host/68c305e2-0c57-48ee-ac07-eb7c97e09891/rHyJnvkMuO.json"  background="transparent"  speed="1"   loop  autoplay></lottie-player>
       
 </div>
 </template>
@@ -106,6 +106,49 @@
     background-color: var(--button);
     border-radius: 5px;
     width: fit-content;
+}
+
+@media (min-width: 700px) {
+
+    #texte{
+    
+    margin-left: 120px;
+    gap: 10px;
+    align-items: flex-end;
+    /* background-color: var(--back); */
+    
+}
+
+#texte p{
+    
+    
+    margin-top: 50px;
+    
+}
+
+#phone{
+    
+    width: 80%;
+    position: absolute;
+    bottom: -50px;
+}
+
+#test #bubble{
+    
+    height: 330px;
+    width: 430px;
+  
+    
+}
+
+#test #bubble2{
+  
+    height: 400px;
+    width: 500px;
+   
+
+}
+
 }
 
 

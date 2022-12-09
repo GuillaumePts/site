@@ -57,10 +57,14 @@
 <template>
     <header>
 
-        <Figure>
+        <Figure >
 
+            <div id="smoke1"></div>
             
             <img id="moi" src="../assets/img/moi.jpg" alt="">
+            
+
+            <!-- background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(243,243,243,1) 50%); -->
         </Figure>
 
         <div id="msgHeader">
@@ -266,7 +270,7 @@
         height: 200px;
         position: absolute;
         top: 0px;
-        z-index: 1;
+        z-index: -1;
 
 
     }
@@ -331,12 +335,23 @@
         width: 100%;
         max-width: 450px;
         
-        /* background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(164,164,164,1) 100%); */
+       
 
         
         overflow: hidden;
     }
+    
+    header figure #smoke1{
+        width: 100%;
+        height: 140px;
+        position: absolute;
+        
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(243,243,243,1) 50%);
+    }
+
+   
 
     header #moi{
         filter: grayscale(50%)
@@ -366,7 +381,7 @@
 
     #en-tete ul li a {
         
-        z-index: 22;
+        z-index: 2;
         
     }
 
@@ -389,7 +404,7 @@
         text-align: center;
         margin-bottom: 70px;
         gap: 40px;
-        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(243,243,243,1) 50%);
+        
         width: 100%;
 
 
