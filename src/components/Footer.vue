@@ -1,13 +1,63 @@
+<script setup>
+
+function recupData(){
+    let nom = document.querySelector('#nom').value ;
+    let mail = document.querySelector('#mail').value ;
+    let message =  document.querySelector('#msg').value ;
+
+    let verifNom = '' ;
+    let verifMail = '' ;
+    let verifMessage = '' ;
+    
+    if(nom === ''){
+        document.querySelector('#errNom').textContent='Veuillez renseigner un nom';
+    }else if(nom.lenght > 50){
+        document.querySelector('#errNom').textContent='Nom non conforme (trop long)';
+    }else if(nom.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')){
+        document.querySelector('#errNom').textContent='Nom non conforme (Faille xss connard de merde sale pute)';
+    }else if(nom.match(/^[a-zA-Z]+$/)){
+        verifNom = nom
+    }else{
+        document.querySelector('#errNom').textContent='Nom non conforme';
+    }
+
+    if(mail === ''){
+        document.querySelector('#errMail').textContent='Veuillez renseigner une adresse mail';
+    }else if(mail.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')){
+        document.querySelector('#errMail').textContent='Mail non conforme (Faille xss connard de merde sale pute)';
+    }else if(mail.lenght > 200){
+        document.querySelector('#errMail').textContent='Mail non conforme (trop long)';
+    }else if(mail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,20}))$/)){
+        verifMail = mail ; 
+    }else{
+        document.querySelector('#errMail').textContent='Mail non conforme';
+    }
+
+    if(message === ''){
+        document.querySelector('#errMsg').textContent='Veuillez renseigner un message';
+    }else if(message.lenght > 550){
+        document.querySelector('#errMsg').textContent='Message trop long)'
+    }else if(message.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')){
+        document.querySelector('#errMsg').textContent='Message non conforme (Faille xss connard de merde sale pute)'
+    }else{
+        verifMessage = message
+    }
+}
+
+</script>
 <template>
     <footer>
         <h2 class="taille0">Contact</h2>
         <p> Pour un premier contact rapide n'hésitez pas à utiliser le formulaire si dessous. Je vous réponderez sur le mail que vous aurez renseigné dans les plus brefs délai. En éspérant travailler avec vous je vous souhaite une agréable journée !
         </p>
         <div id="contacted">
-            <input class="input" type="text" placeholder="NOM">
-            <input class="input" type="text" placeholder="EMAIL">
+            <input class="input" id="nom" type="text" placeholder="NOM">
+            <span class="err" id="errNom"></span>
+            <input class="input" id="mail" type="text" placeholder="EMAIL">
+            <span class="err" id="errMail"></span>
             <textarea class="input" placeholder="MESSAGE" name="msg" id="msg" cols="30" rows="5"></textarea>
-            <button class="button">Envoyer</button>
+            <span class="err" id="errMsg"></span>
+            <button class="button"  @click="recupData()">Envoyer</button>
         </div>
         <div id="mifooter">
             <h3>Guillaume Pitois</h3>
@@ -39,6 +89,11 @@
     </footer>
 </template>
 <style scoped>
+
+    .err{
+        color: rgb(239, 92, 92);
+    }
+
     footer {
         
         width: 100%;
