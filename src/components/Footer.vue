@@ -1,5 +1,26 @@
 <script setup>
 
+function sendData(nom,mail,msg){
+    
+
+    let obj = {
+        name : nom,
+        email : mail,
+        message : msg
+    }
+
+    fetch('/message',{
+        method:'POST',
+        headers:{
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(obj)
+    })
+    .then(res => res.text())
+    .then(contenu => console.log(contenu))
+}
+
 function recupData(){
     let nom = document.querySelector('#nom').value ;
     let mail = document.querySelector('#mail').value ;
@@ -42,7 +63,12 @@ function recupData(){
     }else{
         verifMessage = message
     }
+
+    if(verifNom.length > 1 && verifMail.length > 1 && verifMessage.length > 1){
+        sendData(verifNom,verifMail,verifMessage)
+    }
 }
+
 
 </script>
 <template>

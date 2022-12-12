@@ -60,6 +60,13 @@ app.get('/', (req, res)=>{
     
 })
 
+app.post('/message', (req,res)=>{
+    console.log(req.body);
+    console.log('bite')
+
+    res.send('message reçu')
+})
+
 
 
 
