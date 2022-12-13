@@ -61,10 +61,84 @@ app.get('/', (req, res)=>{
 })
 
 app.post('/message', (req,res)=>{
-    console.log(req.body);
-    console.log('bite')
 
-    res.send('message reçu')
+   
+    
+
+    try{
+
+        let nom = req.body.name ;
+        let mail = req.body.email ;
+        let message = req.body.message ;
+    
+        let tabErr = [];
+    
+        let verifNom = '' ;
+        let verifMail = '' ;
+        let verifMessage = '' ;
+        
+        if(nom === ''){
+            tabErr.push(1);
+        }else if(nom.lenght > 50){
+            tabErr.push(1);
+        }else if(nom.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')){
+            tabErr.push(1);
+        }else if(nom.match(/^[a-zA-Z]+$/)){
+            verifNom = nom
+        }else{
+            tabErr.push(1);
+        }
+    
+        if(mail === ''){
+            tabErr.push(1);
+        }else if(mail.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')){
+            tabErr.push(1);
+        }else if(mail.lenght > 200){
+           tabErr.push(1);
+        }else if(mail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,20}))$/)){
+            verifMail = mail ; 
+        }else{
+            tabErr.push(1);
+        }
+    
+        if(message === ''){
+            tabErr.push(1);
+        }else if(message.lenght > 550){
+            tabErr.push(1);
+        }else if(message.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')){
+            tabErr.push(1);
+        }else{
+            verifMessage = message
+        }
+    
+        if(verifNom.length > 1 && verifMail.length > 1 && verifMessage.length > 1 && tabErr.length < 1 ){
+            
+            Msg.findOne({
+                email : verifMail
+            }, (err,exist)=>{
+                if(err){
+                    console.log(err)
+                    res.send('une erreur est survenu lors de l\'enregistrement de votre message')
+                }else if(exist){
+                    res.send('un message existe déja')
+                }else{
+                    let data = new Msg() ; 
+                    data.email = verifMail ; 
+                    data.nom = verifNom ; 
+                    data.message = verifMessage ;
+                    data.createdAt = new Date();
+                    data.save()
+
+                    res.send('message enregistré')
+                }
+            })
+        }
+
+
+    }catch (e){
+
+        res.send('un problème est survenu')
+    }
 })
 
 
