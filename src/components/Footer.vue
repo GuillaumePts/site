@@ -4,17 +4,19 @@
 
     function retour(contenu){
 
-        console.log(contenu);
+       console.log('bite');
 
         const button = document.querySelector('#sendButton')
         const loader = document.querySelector('#loader')
-        const valide = document.querySelector('#valide')
+        const resServer = document.querySelector('#resServer')
+                    resServer.textContent=contenu
+        
 
-        valide.style.display ="block"
+        
         loader.style.display ="none"
 
         setTimeout(() => {
-            valide.style.display ="none"
+            
             button.style.display = "block"
         }, 5000);
     }
@@ -42,14 +44,18 @@
             })
             .then(function(res){
                 if(!res.ok){
-                    console.log('poblème : ',res);
+                    console.log('problème : ',res);
                     const resServer = document.querySelector('#resServer')
                     resServer.textContent="Un problème est survenu je vous invite à me contacter via mon adresse mail : guillaume.pitois@proton.me"
+                    
                 }else{
                     res.text()
+                    .then(contenu => retour(contenu))
+                    
+                    
                 }
             })
-            .then(contenu => retour(contenu))
+            
             .catch(err =>{
                 console.log(err)
                 const resServer = document.querySelector('#resServer')
@@ -143,13 +149,7 @@
                 <lottie-player id="loader" src="https://assets1.lottiefiles.com/packages/lf20_tsxbtrcu.json"
                     background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay>
                 </lottie-player>
-                <svg id="valide" xmlns="http://www.w3.org/2000/svg" width="32" height="32" version="1.1" viewBox="0 0 32 32">
-                    <g transform="scale(2)">
-                        <circle style="fill:#4caf50" cx="8" cy="8" r="7" />
-                        <path style="fill:#ffffff"
-                            d="M 11.535,4.4 7.2928,8.6 4.4647,5.8 3.0506,7.2 5.8787,10.1 7.2928,11.5 12.949,5.8 Z" />
-                    </g>
-                </svg>
+                
             </div>
         </div>
         <div id="mifooter">
@@ -236,9 +236,7 @@
         display: none;
     }
 
-    #valide {
-        display: none;
-    }
+   
 
     .err {
         color: rgb(239, 92, 92);
