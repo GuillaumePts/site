@@ -1,57 +1,5 @@
 <script setup>
-    let root = document.documentElement;
-    
 
-  
-
-
-    function nightMode() {
-        const lebird = document.querySelectorAll('.bird');
-        const fleche = document.querySelector('#Capa_1')
-        const nMode = document.querySelector('#mode');
-        
-        const pied = document.querySelector('#footer')
-        
-
-        nMode.classList.toggle('sun');
-        nMode.classList.toggle('night');
-
-        let laclass = nMode.classList.value;
-
-        if (laclass === 'sun') {
-
-            root.style.setProperty("--text", "rgb(0, 0, 0)");
-            root.style.setProperty("--back", "#fff");
-            lebird[0].style.display = "none"
-            lebird[1].style.display = "block"
-
-    
-
-            pied.style.backgroundColor = "#333"
-
-            nMode.style.border="3px solid #000"
-        
-        
-
-
-        } else {
-
-            root.style.setProperty("--back", "rgb(0, 0, 0)");
-            root.style.setProperty("--text", "rgb(218, 218, 218)");
-            lebird[1].style.display = "none"
-            lebird[0].style.display = "block"
-
-    
-            
-            
-            pied.style.backgroundColor = "rgba(51, 51, 51, 0.457)"
-
-            nMode.style.border="3px solid rgb(255, 255, 255)"
-
-        }
-
-
-    }
 </script>
 
 <template>
@@ -61,10 +9,8 @@
 
             <div id="smoke1"></div>
             
-            <img id="moi" src="../assets/img/moi.jpg" alt="">
-            
+            <img id="moi" src="../assets/img/pexels-tatiana-syrikova-3975680.jpg" alt="">
 
-            <!-- background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(243,243,243,1) 50%); -->
         </Figure>
 
         <div id="msgHeader">
@@ -120,7 +66,7 @@
 
 <ul>
     <li>
-        <a href="#"><svg class="svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <a href="https://github.com/GuillaumePts"><svg class="svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M24.0002 0C10.747 0 0 11.0169 0 24.6076C0 35.4799 6.87679 44.7039 16.4128 47.9577C17.6123 48.1855 18.0526 47.4239 18.0526 46.7739C18.0526 46.1872 18.0304 44.2487 18.02 42.1925C11.3431 43.6811 9.93424 39.2891 9.93424 39.2891C8.84249 36.4448 7.26945 35.6885 7.26945 35.6885C5.09191 34.1613 7.43359 34.1926 7.43359 34.1926C9.84363 34.3662 11.1126 36.7285 11.1126 36.7285C13.2532 40.4904 16.7272 39.4028 18.0967 38.7741C18.3121 37.1836 18.9341 36.0981 19.6205 35.4836C14.2897 34.8613 8.6859 32.7513 8.6859 23.3224C8.6859 20.6358 9.62345 18.4406 11.1587 16.7174C10.9095 16.0976 10.088 13.5947 11.3912 10.2052C11.3912 10.2052 13.4066 9.54386 17.993 12.7276C19.9074 12.1824 21.9606 11.9089 24.0002 11.8996C26.0398 11.9089 28.0946 12.1824 30.0126 12.7276C34.5934 9.54386 36.606 10.2052 36.606 10.2052C37.9124 13.5947 37.0905 16.0976 36.8413 16.7174C38.3801 18.4406 39.3113 20.6358 39.3113 23.3224C39.3113 32.7737 33.6968 34.8548 28.3525 35.464C29.2133 36.2276 29.9804 37.7252 29.9804 40.021C29.9804 43.3135 29.9526 45.9634 29.9526 46.7739C29.9526 47.4288 30.3846 48.1961 31.6011 47.9544C41.132 44.697 48 35.4762 48 24.6076C48 11.0169 37.2546 0 24.0002 0"
                     fill="var(--text)" />
@@ -163,7 +109,7 @@
             </svg></a>
     </li>
     <li>
-        <a href="#"><svg class="svg " style="enable-background:new 0 0 112.196 112.196;" version="1.1"
+        <a href="https://www.linkedin.com/in/guillaume-pitois-906104240/"><svg class="svg " style="enable-background:new 0 0 112.196 112.196;" version="1.1"
                 viewBox="0 0 112.196 112.196" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g>
@@ -219,14 +165,7 @@
 
 </ul>
 
-<div id="positionMode">
-            <div id="mode" class="night" @click="nightMode()">
-                <div id="selectmode"></div>
-            </div>
-            <span class="material-symbols-outlined">
-                nights_stay
-            </span>
-        </div>
+
 
 </div>
     </header>

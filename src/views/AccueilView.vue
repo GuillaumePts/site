@@ -4,14 +4,6 @@
 
 </script>
 <template>
-   
-
-   
-
-     
-
-
-
 
 <div id="test">
 
@@ -21,7 +13,7 @@
     <div id="texte">
         <p>Vous recherchez un <span id="dev">Developpeur ?</span></p>
 
-        <a class="contact" href="#footer">Contactez moi </a>
+        <a class="contact" href="#footer">Contactez moi</a>
     </div>
     
 <lottie-player id="phone" src="https://lottie.host/68c305e2-0c57-48ee-ac07-eb7c97e09891/rHyJnvkMuO.json"  background="transparent"  speed="1"   loop  autoplay></lottie-player>
@@ -48,7 +40,7 @@
     height: 300px;
     width: 400px;
     border-radius: 50%;
-    background: linear-gradient(0deg, rgba(216,211,223,1) 0%, rgba(157,145,175,1) 100%);;
+    background: linear-gradient(0deg, rgba(216,211,223,1) 0%, rgba(157,145,175,1) 100%);
     z-index: -2;
     transform: translateY(-50%) translateX(-50%);
     top: 0;
@@ -88,6 +80,10 @@
     padding: 20px;
     text-align: right;
     margin-top: 100px;
+}
+
+#texte a{
+    z-index: 2;
 }
 
 #dev{

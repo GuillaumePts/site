@@ -4,7 +4,7 @@
 
     function retour(contenu){
 
-       console.log('bite');
+    
 
         const button = document.querySelector('#sendButton')
         const loader = document.querySelector('#loader')
@@ -130,7 +130,7 @@
     }
 </script>
 <template>
-    <footer>
+    <footer id="footer">
         <h2 class="taille0">Contact</h2>
         <p> Pour un premier contact rapide n'hésitez pas à utiliser le formulaire si dessous. Je vous réponderez sur le
             mail que vous aurez renseigné dans les plus brefs délai. En éspérant travailler avec vous je vous souhaite
