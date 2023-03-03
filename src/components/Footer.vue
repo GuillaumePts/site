@@ -154,7 +154,7 @@
         </div>
         <div id="mifooter">
             <h3>Guillaume Pitois</h3>
-            <p>guillaume.pitois.dev@proton.me</p>
+            <p>guillaume.pitois@proton.me</p>
             <ul class="media">
 
                 <li>

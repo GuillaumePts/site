@@ -11,10 +11,10 @@ const cors = require('cors')
 
 
 //  mis en place server https 
-const server = https.createServer({ 
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert') 
- }, app);
+// const server = https.createServer({ 
+//     key: fs.readFileSync('server.key'),
+//     cert: fs.readFileSync('server.cert') 
+//  }, app);
 
 
 //  contient la phrase de connection à la bdd
@@ -144,6 +144,14 @@ app.post('/message', (req,res)=>{
 
 
 
-server.listen(9999, (req, res)=>{
-    console.log("server ok ! : https://192.168.1.13:9999");
-})
+// server.listen(9999, (req, res)=>{
+//     console.log("server ok ! : https://192.168.1.13:9999");
+// })
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port, (req,res)=>{
+    console.log("server ok ! : "+port);
+});

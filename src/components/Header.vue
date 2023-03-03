@@ -14,7 +14,7 @@
         </Figure>
 
         <div id="msgHeader">
-            <h2 class="taille0">Guillaume Pitois <span class="taille1"><br /> Developpeur web Full Stack</span></h2>
+            <h2 class="taille0">Guillaume Pitois <span class="taille1"><br /> Développeur web Full Stack</span></h2>
             <a class="taille2 contact2" href="#main"><svg version="1.1" class="Capa_1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 12.414 12.414" style="enable-background:new 0 0 12.414 12.414;" xml:space="preserve">

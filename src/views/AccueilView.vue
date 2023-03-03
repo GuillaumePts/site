@@ -11,7 +11,7 @@
     <div id="bubble2"></div>
 
     <div id="texte">
-        <p>Vous recherchez un <span id="dev">Developpeur ?</span></p>
+        <p>Vous recherchez un <span id="dev">Développeur ?</span></p>
 
         <a class="contact" href="#footer">Contactez moi</a>
     </div>

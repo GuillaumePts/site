@@ -104,4 +104,17 @@
 }
 
 
+@media (min-width: 913px){
+    #card{
+        max-width: 550px;
+        height: 600px;
+    }
+
+    #card figure{
+    width: 100%;
+    height: 240px;
+}
+}
+
+
 </style>
