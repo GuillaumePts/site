@@ -199,6 +199,7 @@
         /* border-bottom: 2px solid var(--primary); */
         color: var(--text);
         position: relative;
+        
 
 
 
@@ -270,7 +271,7 @@
         justify-content: space-between;
         position: absolute;
         bottom: 0;
-        z-index: -1;
+        z-index: 1;
         width: 100%;
         max-width: 450px;
         
@@ -282,11 +283,11 @@
     
     header figure #smoke1{
         width: 100%;
-        height: 140px;
+        height: 150px;
         position: absolute;
-        
+
         top: 0;
-        z-index: 1;
+        z-index: 2;
         background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(243,243,243,1) 50%);
     }
 
@@ -332,6 +333,7 @@
 
     header figure img {
         width: 100%;
+        border-top: 1px solid #fff;
     }
 
     header #msgHeader {
