@@ -95,14 +95,6 @@
 }
 
 
-.contact{
-    padding: 7px 12px;
-    color: #fff;
-    font-weight: 800;
-    background-color: var(--button);
-    border-radius: 5px;
-    width: fit-content;
-}
 
 @media (min-width: 700px) {
 

@@ -7,10 +7,8 @@
 
 <div id="moncontainer" >
 
-    <lottie-player id="plane" src="https://assets10.lottiefiles.com/packages/lf20_aoOp5Bl7k1.json"  background="transparent"  mode="bounce"  speed="1"  style="width: 300px; height: 300px;"   loop  autoplay></lottie-player>
-
-
     <div id="card">
+        <a class="contact" href="#footer">Contactez moi</a>
         <figure>
             <img src="../assets/img/moisetup.jpg" alt="">
         </figure>
@@ -35,28 +33,7 @@
 </template>
 <style scoped>
 
-#plane{
-    position: absolute;
-    animation: fly 3s forwards linear;
-    transform: rotateY(180deg);
-    display: none;
-}
 
-@keyframes fly{
-    0%{
-        bottom:85%;
-        right: -300px;
-        transform: rotate(0deg) rotateY(180deg);
-    }
-    
-    100%{
-        bottom:0px;
-        right: 100%;
-        transform: rotate(-50deg) rotateY(180deg);
-        
-    }
-    
-}
 
 #moncontainer{
     width: 100%;
@@ -70,9 +47,9 @@
 
 }
 
+
+
 #card{
-    /* background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;  */
     box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
     transition: 0.2s ease-in-out;
     border-radius: 20px;
@@ -81,7 +58,15 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    position: relative;
+}
+
+#card a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 #card:hover{
@@ -92,11 +77,14 @@
 #card figure{
     width: 100%;
     height: 150px;
+    
 }
 
 #card figure img{
     width: 100%;
     /* filter: grayscale(50%) */
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 #card div{

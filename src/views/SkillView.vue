@@ -4,6 +4,7 @@
 <template>
 
 <div id="cont">
+   <a class="contact" href="#footer">Contactez moi</a>
    <div id="card-stack-p">
       <h2>Stack technique</h2>
       <h3>Front-end</h3>
@@ -71,6 +72,8 @@
    padding-top: 50px;
    padding-bottom: 50px;
 }
+
+
 
 #cont #card-stack-p{
    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
@@ -206,6 +209,12 @@
       align-items: center;
       transition: .3s ease-in-out;
       
+   }
+
+   #cont a{
+   position: absolute;
+   right: 70px;
+   top: 200px
    }
 
 

@@ -69,3 +69,13 @@ a.router-link-exact-active{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 0.9rem;
 }
+
+.contact{
+  padding: 7px 12px;
+  color: #fff;
+  font-weight: 800;
+  background-color: var(--button);
+  border-radius: 5px;
+  width: fit-content;
+  z-index: 50;
+}

@@ -18,11 +18,11 @@ const cors = require('cors')
 
 
 //  contient la phrase de connection à la bdd
- const mdp = require('./env');
+const mdp = require('./env');
 
 
 //  connection cluster mongodb
- try {
+try {
     
     mongoose.connect(
         mdp.mongoAtlasUri, {
@@ -53,17 +53,12 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, 'dist')))
 
 app.get('/', (req, res)=>{
-   
-   
+
     res.sendFile(path.join(__dirname, 'dist/index.html'))
-    
-    
+
 })
 
 app.post('/message', (req,res)=>{
-
-   
-    
 
     try{
 
@@ -94,7 +89,7 @@ app.post('/message', (req,res)=>{
         }else if(mail.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')){
             tabErr.push(1);
         }else if(mail.lenght > 200){
-           tabErr.push(1);
+            tabErr.push(1);
         }else if(mail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,20}))$/)){
             verifMail = mail ; 
         }else{
@@ -118,9 +113,13 @@ app.post('/message', (req,res)=>{
             }, (err,exist)=>{
                 if(err){
                     console.log(err)
-                    res.send('une erreur est survenu lors de l\'enregistrement de votre message')
+                    res.statusCode = 500;
+                    res.setHeader('Content-Type', 'text/plain');
+                    res.end('Un problème est survenu ! Veuillez directement me contacter par mail');
                 }else if(exist){
-                    res.send('un message existe déja')
+                    res.statusCode = 200;
+                    res.setHeader('Content-Type', 'text/plain');
+                    res.end('Un message existe déja à cette adresse mail, veuillez directement me contacter par mail');
                 }else{
                     let data = new Msg() ; 
                     data.email = verifMail ; 
@@ -129,7 +128,9 @@ app.post('/message', (req,res)=>{
                     data.createdAt = new Date();
                     data.save()
 
-                    res.send('message enregistré')
+                    res.statusCode = 201;
+                    res.setHeader('Content-Type', 'text/plain');
+                    res.end('message enregistré !');
                 }
             })
         }

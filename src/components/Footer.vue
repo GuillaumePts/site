@@ -1,32 +1,14 @@
 <script setup>
 
-        
-
-    function retour(contenu){
-
-    
-
-        const button = document.querySelector('#sendButton')
-        const loader = document.querySelector('#loader')
-        const resServer = document.querySelector('#resServer')
-                    resServer.textContent=contenu
-        
-
-        
-        loader.style.display ="none"
-
-        setTimeout(() => {
-            
-            button.style.display = "block"
-        }, 5000);
-    }
-
 
     function sendData(nom, mail, msg) {
 
+        const button = document.querySelector('#sendButton');
+        const loader = document.querySelector('#loader');
+        const response = document.querySelector('#response');
 
-        
-
+        button.style.display = 'none'
+        loader.style.display = 'block'
 
         let obj = {
             name: nom,
@@ -42,45 +24,36 @@
                 },
                 body: JSON.stringify(obj)
             })
-            .then(function(res){
-                if(!res.ok){
-                    console.log('problème : ',res);
-                    const resServer = document.querySelector('#resServer')
-                    resServer.textContent="Un problème est survenu je vous invite à me contacter via mon adresse mail : guillaume.pitois@proton.me"
-                    
+            .then(res => res.text())
+            .then((datas) => {
+                button.style.display = 'block';
+                loader.style.display = 'none';
+                document.querySelector('#nom').value='';
+                document.querySelector('#mail').value='';
+                document.querySelector('#msg').value='';
+                
+                if(datas === "message enregistré !"){
+                    response.textContent = datas
+                    response.style.color = '#00c2a3'
                 }else{
-                    res.text()
-                    .then(contenu => retour(contenu))
-                    
-                    
+                    response.textContent = datas
+                    response.style.color = 'rgb(239, 92, 92)'
                 }
             })
-            
-            .catch(err =>{
-                console.log(err)
-                const resServer = document.querySelector('#resServer')
-                    resServer.textContent="Un problème est survenu je vous invite à me contacter via mon adresse mail : guillaume.pitois@proton.me"
-            })
+                
             
 
     }
 
     function recupData() {
 
-        const button = document.querySelector('#sendButton')
-        const loader = document.querySelector('#loader')
-        
-
-        button.style.display = 'none'
-        loader.style.display = 'block'
-
-
-
-
-
         let nom = document.querySelector('#nom').value;
         let mail = document.querySelector('#mail').value;
         let message = document.querySelector('#msg').value;
+
+        document.querySelector('#errNom').textContent = '';
+        document.querySelector('#errMail').textContent = '';
+        document.querySelector('#errMsg').textContent = '';
 
         let verifNom = '';
         let verifMail = '';
@@ -91,7 +64,7 @@
         } else if (nom.lenght > 50) {
             document.querySelector('#errNom').textContent = 'Nom non conforme (trop long)';
         } else if (nom.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')) {
-            document.querySelector('#errNom').textContent = 'Nom non conforme (Faille xss connard de merde sale pute)';
+            document.querySelector('#errNom').textContent = 'Nom non conforme (Faille xss)';
         } else if (nom.match(/^[a-zA-Z]+$/)) {
             verifNom = nom
         } else {
@@ -102,7 +75,7 @@
             document.querySelector('#errMail').textContent = 'Veuillez renseigner une adresse mail';
         } else if (mail.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')) {
             document.querySelector('#errMail').textContent =
-            'Mail non conforme (Faille xss connard de merde sale pute)';
+            'Mail non conforme (Faille xss)';
         } else if (mail.lenght > 200) {
             document.querySelector('#errMail').textContent = 'Mail non conforme (trop long)';
         } else if (mail.match(
@@ -119,7 +92,7 @@
             document.querySelector('#errMsg').textContent = 'Message trop long)'
         } else if (message.match('<(|\/|[^\/>][^>]+|\/[^>][^>]+)>')) {
             document.querySelector('#errMsg').textContent =
-                'Message non conforme (Faille xss connard de merde sale pute)'
+                'Message non conforme (Faille xss)'
         } else {
             verifMessage = message
         }
@@ -128,14 +101,14 @@
             sendData(verifNom, verifMail, verifMessage)
         }
     }
+
 </script>
+
+
 <template>
     <footer id="footer">
         <h2 class="taille0">Contact</h2>
-        <p> Pour un premier contact rapide n'hésitez pas à utiliser le formulaire si dessous. Je vous réponderez sur le
-            mail que vous aurez renseigné dans les plus brefs délai. En éspérant travailler avec vous je vous souhaite
-            une agréable journée !
-        </p>
+        <p>Pour un premier contact rapide, n'hésitez pas à utiliser le formulaire ci-dessous. Je vous répondrai sur le mail que vous aurez renseigné dans les plus brefs délais. En espérant travailler avec vous, je vous souhaite une agréable journée !</p>
         <div id="contacted">
             <input class="input" id="nom" type="text" placeholder="NOM">
             <span class="err" id="errNom"></span>
@@ -143,13 +116,12 @@
             <span class="err" id="errMail"></span>
             <textarea class="input" placeholder="MESSAGE" name="msg" id="msg" cols="30" rows="5"></textarea>
             <span class="err" id="errMsg"></span>
-            <p id="resServer"></p>
+            <p id="response"></p>
             <div id="send">
                 <button class="button" id="sendButton" @click="recupData()">Envoyer</button>
                 <lottie-player id="loader" src="https://assets1.lottiefiles.com/packages/lf20_tsxbtrcu.json"
                     background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay>
                 </lottie-player>
-                
             </div>
         </div>
         <div id="mifooter">
@@ -158,7 +130,7 @@
             <ul class="media">
 
                 <li>
-                    <a href="#"><svg class="svg" enable-background="new 0 0 128 128" id="Social_Icons" version="1.1"
+                    <a href="https://github.com/GuillaumePts"><svg class="svg" enable-background="new 0 0 128 128" id="Social_Icons" version="1.1"
                             viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="_x31__stroke">
@@ -173,24 +145,9 @@
                         </svg>
                     </a>
                 </li>
+
                 <li>
-                    <a href="#"><svg class="svg" enable-background="new 0 0 157.728 157.731" height="157.731"
-                            id="Layer_1" overflow="visible" version="1.1" viewBox="0 0 157.728 157.731" width="157.728"
-                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g id="icon_2_">
-                                <path
-                                    d="M78.864,0c43.556,0,78.863,35.308,78.863,78.864c0,43.552-35.308,78.868-78.863,78.868   C35.308,157.731,0,122.416,0,78.864C0,35.308,35.308,0,78.864,0z"
-                                    fill="#8C9EFF" />
-                                <path
-                                    d="M113.101,53.34c0,0-9.76-7.635-21.284-8.514l-1.043,2.076c10.425,2.552,15.2,6.207,20.199,10.695   c-8.612-4.394-17.112-8.514-31.927-8.514c-14.815,0-23.322,4.12-31.926,8.514c4.985-4.488,10.677-8.545,20.192-10.695l-1.036-2.076   c-12.099,1.145-21.284,8.514-21.284,8.514S34.09,69.143,32.221,100.166c10.985,12.672,27.669,12.771,27.669,12.771l3.487-4.649   c-5.923-2.059-12.61-5.741-18.386-12.378c6.889,5.209,17.293,10.642,34.055,10.642c16.762,0,27.158-5.426,34.055-10.642   c-5.783,6.637-12.47,10.319-18.386,12.378l3.487,4.649c0,0,16.677-0.099,27.669-12.771C123.995,69.143,113.101,53.34,113.101,53.34   z M65.211,91.651c-4.117,0-7.449-3.809-7.449-8.514c0-4.701,3.333-8.513,7.449-8.513c4.117,0,7.45,3.812,7.45,8.513   C72.661,87.843,69.328,91.651,65.211,91.651z M92.881,91.651c-4.117,0-7.45-3.809-7.45-8.514c0-4.701,3.333-8.513,7.45-8.513   c4.116,0,7.449,3.812,7.449,8.513C100.33,87.843,96.99,91.651,92.881,91.651z"
-                                    fill="#FFFFFF" />
-                            </g>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><svg class="svg" id="Capa_1" style="enable-background:new 0 0 112.196 112.196;"
+                    <a href="https://www.linkedin.com/in/guillaume-pitois-906104240/"><svg class="svg" id="Capa_1" style="enable-background:new 0 0 112.196 112.196;"
                             version="1.1" viewBox="0 0 112.196 112.196" xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g>
@@ -240,6 +197,8 @@
 
     .err {
         color: rgb(239, 92, 92);
+        height: 20px
+
     }
 
     footer {
@@ -276,6 +235,10 @@
         padding: 20px;
         width: 100%;
         color: #fff;
+    }
+
+    footer #contacted .input:focus{
+        outline: none;
     }
 
     footer #contacted .button {
@@ -329,6 +292,15 @@
         justify-content: space-between;
         align-items: center;
         font-size: 0.7rem;
+    }
+
+    #response{
+        margin: 10px;
+        height: 20px;
+    }
+
+    #msg{
+        resize: none;
     }
 
     .fsvg {

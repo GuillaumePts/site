@@ -14,7 +14,7 @@ function lottie(){
     
     // console.log(test);
 
-    console.log('bite');
+    
     setTimeout(() => {
         const respons = document.querySelectorAll('.responsive')
         const cSun = document.querySelector('#mode')
@@ -73,18 +73,16 @@ main{
 
 
 nav {
-  width: 100%;
-  font-size: 0.9rem;
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center; 
-  position: sticky;
-  bottom: 0;
-  background: var(--text);
- 
-
-
+width: 100%;
+font-size: 0.9rem;
+text-align: center;
+display: flex;
+justify-content: space-evenly;
+align-items: center; 
+position: sticky;
+bottom: 0;
+background: var(--text);
+z-index: 50;
 }
 
 nav a{

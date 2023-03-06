@@ -14,7 +14,7 @@
         </Figure>
 
         <div id="msgHeader">
-            <h2 class="taille0">Guillaume Pitois <span class="taille1"><br /> Développeur web Full Stack</span></h2>
+            <h2 class="taille0">Guillaume Pitois <span class="taille1"><br/> Développeur web Full Stack</span></h2>
             <a class="taille2 contact2" href="#main"><svg version="1.1" class="Capa_1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 12.414 12.414" style="enable-background:new 0 0 12.414 12.414;" xml:space="preserve">
@@ -94,20 +94,7 @@
             </svg>
         </a>
     </li>
-    <li>
-        <a href="#"><svg class="svg" enable-background="new 0 0 157.728 157.731" overflow="visible"
-                version="1.1" viewBox="0 0 157.728 157.731" xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g >
-                    <path
-                        d="M78.864,0c43.556,0,78.863,35.308,78.863,78.864c0,43.552-35.308,78.868-78.863,78.868   C35.308,157.731,0,122.416,0,78.864C0,35.308,35.308,0,78.864,0z"
-                        fill="var(--text)" />
-                    <path
-                        d="M113.101,53.34c0,0-9.76-7.635-21.284-8.514l-1.043,2.076c10.425,2.552,15.2,6.207,20.199,10.695   c-8.612-4.394-17.112-8.514-31.927-8.514c-14.815,0-23.322,4.12-31.926,8.514c4.985-4.488,10.677-8.545,20.192-10.695l-1.036-2.076   c-12.099,1.145-21.284,8.514-21.284,8.514S34.09,69.143,32.221,100.166c10.985,12.672,27.669,12.771,27.669,12.771l3.487-4.649   c-5.923-2.059-12.61-5.741-18.386-12.378c6.889,5.209,17.293,10.642,34.055,10.642c16.762,0,27.158-5.426,34.055-10.642   c-5.783,6.637-12.47,10.319-18.386,12.378l3.487,4.649c0,0,16.677-0.099,27.669-12.771C123.995,69.143,113.101,53.34,113.101,53.34   z M65.211,91.651c-4.117,0-7.449-3.809-7.449-8.514c0-4.701,3.333-8.513,7.449-8.513c4.117,0,7.45,3.812,7.45,8.513   C72.661,87.843,69.328,91.651,65.211,91.651z M92.881,91.651c-4.117,0-7.45-3.809-7.45-8.514c0-4.701,3.333-8.513,7.45-8.513   c4.116,0,7.449,3.812,7.449,8.513C100.33,87.843,96.99,91.651,92.881,91.651z"
-                        fill="var(--back)" />
-                </g>
-            </svg></a>
-    </li>
+
     <li>
         <a href="https://www.linkedin.com/in/guillaume-pitois-906104240/"><svg class="svg " style="enable-background:new 0 0 112.196 112.196;" version="1.1"
                 viewBox="0 0 112.196 112.196" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -345,10 +332,11 @@
         text-align: center;
         margin-bottom: 70px;
         gap: 40px;
-        
         width: 100%;
+    }
 
-
+    header #msgHeader h2{
+        z-index: 50;
     }
 
 
@@ -362,6 +350,7 @@
         border-radius: 50px;
         background-color: var(--text);
         padding: 10px;
+        z-index: 50;
     }
 
     .Capa_1 {
