@@ -117,7 +117,7 @@
 
 #cont #card-stack-p div:nth-of-type(3) svg{
    width: 80px;
-   margin-top: 10px;
+   margin-top: 9px;
 }
 
 
