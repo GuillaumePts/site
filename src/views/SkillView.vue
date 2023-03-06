@@ -108,7 +108,6 @@
 }
 
 #cont #card-stack-p div svg{
-
    width: 50px;
 }
 
@@ -203,6 +202,103 @@
 
 
 @media (min-width: 913px){
+
+
+
+   #cont{
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      transition: .3s ease-in-out;
+      
+   }
+
+   #cont a{
+   position: absolute;
+   right: 20px;
+   top: 100px
+   }
+
+   #cont #card-stack-p{
+   
+   padding: 20px;
+   
+   }
+
+   #cont #card-stack-p h2{
+   
+   margin-bottom: 7px;
+   }
+
+   #cont #card-stack-p div svg{
+   width: 40px;
+   }
+
+   #cont #card-stack-p div:nth-of-type(2) svg{
+   width: 80px;
+   }
+
+   #cont #card-stack-p div:nth-of-type(3) svg{
+   width: 60px;
+   margin-top: 5px;
+   }
+
+   
+
+
+   #cont #outils{
+
+      height: 450px;
+      position: absolute;
+      z-index: 1;
+   }
+
+   #cont #outils:hover{
+      z-index: 4;
+   }
+
+   #cont #card-stack-s:hover{
+      z-index: 4;
+   }
+
+   #cont #card-stack-p:hover{
+      z-index: 4;
+   }
+
+   #cont #card-stack-s{
+      height: 450px;
+      position: absolute;
+      z-index: 2;
+      
+   }
+
+   #cont #outils div{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   #cont #card-stack-p{
+      height: 450px;
+      position: absolute;
+      z-index: 3;
+   }
+
+   #cont:hover #card-stack-p{
+      transform: translateX(-100px) ;
+   }
+
+   #cont:hover #card-stack-s{
+      transform: translateX(0) ;
+   }
+
+   #cont:hover #outils{
+      transform: translateX(100px) ;
+   }
+}
+
+
+@media (min-width: 1113px){
    #cont{
       position: relative;
       justify-content: center;
@@ -268,7 +364,6 @@
       transform: translateX(100px) ;
    }
 }
-
 
 
 </style>

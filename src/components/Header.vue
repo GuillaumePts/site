@@ -260,11 +260,7 @@
         bottom: 0;
         z-index: 1;
         width: 100%;
-        max-width: 450px;
-        
-       
-
-        
+        max-height: 75vh;
         overflow: hidden;
     }
     
@@ -281,7 +277,8 @@
    
 
     header #moi{
-        filter: grayscale(50%)
+        filter: grayscale(50%);
+        
     }
 
     #en-tete{
@@ -321,10 +318,11 @@
     header figure img {
         width: 100%;
         border-top: 1px solid #fff;
+        
     }
 
     header #msgHeader {
-        width: 80%;
+        
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -333,6 +331,8 @@
         margin-bottom: 70px;
         gap: 40px;
         width: 100%;
+        height: 25vh;
+
     }
 
     header #msgHeader h2{

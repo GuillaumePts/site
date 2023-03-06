@@ -94,6 +94,25 @@
 
 @media (min-width: 913px){
     #card{
+        margin-top: 60px;
+        max-width: 500px;
+        height: 470px;
+    }
+
+    #card figure{
+        width: 100%;
+        height: 190px;
+        overflow: hidden;
+    }
+
+    #card div{
+    margin: 10px 5px;
+}
+}
+
+
+@media (min-width: 1113px){
+    #card{
         max-width: 550px;
         height: 600px;
     }
@@ -101,8 +120,14 @@
     #card figure{
     width: 100%;
     height: 240px;
+    }
+
+    #card div{
+    margin: 20px 10px;
+    }
 }
-}
+
+
 
 
 </style>
