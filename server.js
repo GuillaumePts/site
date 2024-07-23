@@ -58,6 +58,10 @@ app.get('/', (req, res)=>{
 
 })
 
+app.get('/cv', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'src/assets/CV.6.0.pdf'))
+})
+
 app.post('/message', (req,res)=>{
 
     try{

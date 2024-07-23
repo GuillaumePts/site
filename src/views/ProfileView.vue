@@ -7,24 +7,35 @@
 
 <div id="moncontainer" >
 
+
     <div id="card">
         <a class="contact" href="#footer">Contactez moi</a>
         <figure>
-            <img src="../assets/img/moisetup.jpg" alt="">
+            <img src="../assets/img/moichameau.jpg" alt="">
         </figure>
         <div>
-            <p><span class="material-symbols-outlined">person</span> Pitois Guillaume, 22 ans</p>
-            <p><span class="material-symbols-outlined">home_pin</span> de Normandie</p>
+            
+                <p><span class="material-symbols-outlined">person</span> Pitois Guillaume, 22 ans</p>
+                <p><span class="material-symbols-outlined">home_pin</span> de Normandie</p>
+            
         </div>
         <div>
             <p><span class="material-symbols-outlined">school</span> Obtention du Titre RNCP bac+2 Développement Web
             et Web mobile. Formation ESCCI</p>
         </div>
         <div>
-            <p><span class="material-symbols-outlined">work</span> Développeur Web Junior "Full Stack"</p>
+            <p><span class="material-symbols-outlined">work</span> Développeur Front End Junior</p>
             <p><span class="material-symbols-outlined">work_history</span> En recherche d'un CDI, CDD ou contrat d'Alternance 
-            (école Wild Code School). Secteur Rouen/Paris ou Full Remote</p>
+            (Openclassroom). Secteur Rouen/Paris ou Full Remote</p>
+            
         </div>
+
+            <a id="cv" class="contact" href="cv" download="CV_Pitois_Guillaume.pdf">
+                Télécharger mon CV <span class="material-symbols-outlined">download</span>
+            </a>
+        
+
+
     </div>
 </div>
 
@@ -61,6 +72,20 @@
     position: relative;
 }
 
+#card #cv{
+    
+    /* position: absolute; */
+    bottom: 0;
+    left: 0; 
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 #card a{
     position: absolute;
     top: 0;
@@ -76,20 +101,31 @@
 
 #card figure{
     width: 100%;
-    height: 150px;
-    
+    height: 250px;
+    position: relative;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    overflow: hidden;
 }
 
 #card figure img{
     width: 100%;
-    /* filter: grayscale(50%) */
-    border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    position: absolute;
+    top: -30px;
+    
+    
 }
 
 #card div{
     margin: 20px 10px;
+  
 }
+
+#card div:last-of-type{
+    margin-bottom: 100px;
+}
+
 
 
 @media (min-width: 913px){
@@ -101,9 +137,21 @@
 
     #card figure{
         width: 100%;
-        height: 190px;
-        overflow: hidden;
+        height: 250px;
+        
+        position: relative;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
     }
+
+    #card figure img{
+        width: 100%;
+        /* filter: grayscale(50%) */
+        border-top-left-radius: 20px;
+        position: absolute;
+        top: -120px;
+        
+    }   
 
     #card div{
     margin: 10px 5px;
@@ -117,10 +165,6 @@
         height: 600px;
     }
 
-    #card figure{
-    width: 100%;
-    height: 240px;
-    }
 
     #card div{
     margin: 20px 10px;
