@@ -27,9 +27,11 @@
         </div>
         <div>
             <p><span class="material-symbols-outlined">work</span> Développeur Front End Junior</p>
-            <p><span class="material-symbols-outlined">work_history</span> En recherche d'un CDI, CDD ou contrat d'Alternance 
-            (Openclassroom). Secteur Rouen/Paris ou Full Remote</p>
+            <p><span class="material-symbols-outlined">work_history</span> En recherche d'un CDI, secteur Rouen/Paris ou Full Remote</p>
             
+        </div>
+        <div>
+            <p></p>
         </div>
 
             <a id="cv" class="contact" href="cv" download="cv2024.pdf">
@@ -66,42 +68,39 @@
 }
 
 #me{
-    width: 320px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    
 }
 
 #me figure{
-    width: 100%;
+    
 }
 
 #me figure img{
-    width: 100%;
-    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
-    border-radius: 20px;
+
+    
 }
 
 #card{
-    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
-    transition: 0.2s ease-in-out;
-    /* border-radius: 20px; */
+    /* box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff; */
+    
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
     width: 90%;
-    max-width: 350px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     position: relative;
 
+
 }
 
 #card #cv{
     
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
-    left: 0; 
+    right: 0; 
     top: auto;
     display: flex;
     flex-direction: column;
@@ -115,13 +114,16 @@
     position: absolute;
     top: 0;
     right: 0;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 #card:hover{
     cursor: pointer;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    /* box-shadow: 0px 10px 20px rgba(0,0,0,0.1); */
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
+    background: #e0e0e0;
+    
 }
 
 
@@ -140,38 +142,53 @@
 @media (min-width: 913px){
     #card{
         
-        max-width: 370px;
-        height: 420px;
+        height: 470px;
         margin: 0;
+        width: 500px;
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
 
     #moncontainer{
         gap: 30px;
-        border: 1px solid blue;
+
     }
 
     #me{
-        width: 320px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
     }
 
     #me figure{
         width: 100%;
+        max-width: 350px;
+    
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 
     #me figure img{
         width: 100%;
         box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
     }
 
-    #me figure:hover{
-    cursor: pointer;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
-    }
+    /* #me figure:hover{
+        cursor: pointer;
+        box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
+    } */
 
     #containercard{
         display: flex;
-        width: 600px;
-        border: 1px solid red;
+        max-width: 800px;
     }
 
 
