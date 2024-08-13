@@ -26,12 +26,12 @@
             et Web mobile. Formation ESCCI</p>
         </div>
         <div>
-            <p><span class="material-symbols-outlined">work</span> Développeur Front End Junior</p>
+            <p><span class="material-symbols-outlined">work</span> Développeur web Full Stack</p>
             <p><span class="material-symbols-outlined">work_history</span> En recherche d'un CDI, secteur Rouen/Paris ou Full Remote</p>
             
         </div>
         <div>
-            <p></p>
+            <p ><span class="material-symbols-outlined">devices</span> Ma dernière création : <a style="color:#00b89b; margin:0; padding:0; text-align: center;" href="https://geraldine-grandir-ensemble.fr/">geraldine-grandir-ensemble.fr/</a> </p>
         </div>
 
             <a id="cv" class="contact" href="cv" download="cv2024.pdf">
@@ -65,6 +65,14 @@
     background-color: #e8e8e8;
     
 
+}
+
+#moncontainer #me div p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    position: relative; 
+    gap: 15px;
 }
 
 #me{
