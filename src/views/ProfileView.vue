@@ -13,7 +13,7 @@
             <figure>
                 <img src="../assets/img/1000003979.jpg" alt="photo du propriétaire du site">
             </figure>
-            <div id="card">
+        <div id="card">
         
         <div>
             
@@ -30,17 +30,15 @@
             <p><span class="material-symbols-outlined">work_history</span> En recherche d'un CDI, secteur Rouen/Paris ou Full Remote</p>
             
         </div>
-        <div>
+        <div id="creation">
             <p ><span class="material-symbols-outlined">devices</span> Ma dernière création : <a style="color:#00b89b; margin:0; padding:0; text-align: center;" href="https://geraldine-grandir-ensemble.fr/">geraldine-grandir-ensemble.fr/</a> </p>
         </div>
 
             <a id="cv" class="contact" href="cv" download="cv2024.pdf">
                 Télécharger mon CV <span class="material-symbols-outlined">download</span>
             </a>
+        </div>
         
-
-
-    </div>
         </div>
         
     </div>
@@ -63,6 +61,7 @@
     flex-direction: column;
     overflow: hidden;
     background-color: #e8e8e8;
+    padding: 100px 0 100px 0;
     
 
 }
@@ -77,16 +76,22 @@
 
 #me{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
     
 }
 
 #me figure{
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #me figure img{
 
-    
+    max-width: 90%;
 }
 
 #card{
@@ -100,8 +105,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    
 
 
+}
+
+#creation p{
+    border: 1px solid red; 
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #card #cv{
