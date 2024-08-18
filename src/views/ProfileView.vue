@@ -17,7 +17,7 @@
         
         <div>
             
-                <p><span class="material-symbols-outlined">person</span> Pitois Guillaume, 22 ans</p>
+                <p><span class="material-symbols-outlined">person</span> Pitois Guillaume, 23 ans</p>
                 <p><span class="material-symbols-outlined">home_pin</span> de Normandie</p>
             
         </div>
@@ -110,10 +110,14 @@
 
 }
 
+
 #creation p{
-    border: 1px solid red; 
     display: flex;
     flex-wrap: wrap;
+}
+
+#creation p a{
+    position: relative;
 }
 
 #card #cv{
@@ -123,9 +127,14 @@
     right: 0; 
     top: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
+    gap: 10px;
     justify-content: center;
+    padding: 4px 15px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
 
