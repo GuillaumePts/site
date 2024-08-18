@@ -5,6 +5,10 @@ const path = require('path');
 const  https = require('https');
 const fs = require('fs');
 const cors = require('cors')
+require('dotenv').config();
+const nodemailer = require('nodemailer');
+const mailmdp = process.env.MAILMDP
+const atlas = process.env.ATLAS
 // const rateLimit = require('express-rate-limit')
 
 
@@ -17,15 +21,14 @@ const cors = require('cors')
 //  }, app);
 
 
-//  contient la phrase de connection à la bdd
-const mdp = require('./env');
+
 
 
 //  connection cluster mongodb
 try {
     
     mongoose.connect(
-        mdp.mongoAtlasUri, {
+        atlas, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         },
@@ -59,16 +62,48 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/cv', (req,res)=>{
-    res.sendFile(path.join(__dirname, 'src/assets/CV.6.0.pdf'))
+    res.sendFile(path.join(__dirname, 'src/assets/cv2024.pdf'))
 })
 
 app.post('/message', (req,res)=>{
+
+         // Configuration du transporteur (transporter)
+        const transporter = nodemailer.createTransport({
+            host: 'smtp-mail.outlook.com', // Adresse du serveur SMTP de Hotmail
+            port: 587, // Port recommandé pour Hotmail (peut également essayer le port 25)
+            secure: false, // Utilisez true pour le transport sécurisé (TLS)
+            auth: {
+                user: 'dev.message@outlook.com',
+                pass: mailmdp
+            }
+        });
+
+        // Définir les options de l'email
+        let mailOptions = {
+            from: 'dev.message@outlook.com', // Expéditeur
+            to: 'guillaume.pitois1@gmail.com',// Destinataire(s)
+            subject: 'new message !',             // Sujet
+            text:  req.body.email + '\n' + req.body.name + '\n' + req.body.message,                   // Corps du message
+        };
+
+        // Envoyer l'email
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error('Erreur lors de l\'envoi de l\'e-mail:', error);
+            } else {
+                console.log('E-mail envoyé avec succès:', info.response);
+            }
+        });
+        
 
     try{
 
         let nom = req.body.name ;
         let mail = req.body.email ;
         let message = req.body.message ;
+
+
+
     
         let tabErr = [];
     
@@ -111,7 +146,8 @@ app.post('/message', (req,res)=>{
         }
     
         if(verifNom.length > 1 && verifMail.length > 1 && verifMessage.length > 1 && tabErr.length < 1 ){
-            
+
+        
             Msg.findOne({
                 email : verifMail
             }, (err,exist)=>{
